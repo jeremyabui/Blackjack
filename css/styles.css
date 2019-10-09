@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/********** Header **********/
+header {
+    width: 100%;
+    /* Used https://cssgradient.io/ for header background gradient */
+    background: rgb(100,100,100);
+    background: radial-gradient(ellipse, rgba(100,100,100,1) 0%, rgba(41,29,32,0.9) 100%);
+    color: #fff;
+    height: 10vh;
+}
+
+h1 {
+    font-family: 'Lilita One', cursive;
+    font-size: 7vh;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 2px;
+    
+}
+
+.blackSuit {
+    color: black;
+    margin: 0 5px 0 5px;
+}
+.redSuit {
+    color: red;
+    margin: 0 5px 0 5px;
+}
+/********** Background **********/
+body {
+    background-image: url(../cardimages/green_felt.jpg);
+    background-size: cover;
+}
+
+
+/********** Dealer Section **********/
+.dealerCards {
+    height: 30vh;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.dealerCards .card {
+    margin-top: 3vh;
+}
+
+.back img {   
+    margin-top: 3vh;
+    height: 25vh;
+    width: auto;
+    padding: 0 5px;
+}
+
+/********** Bet Styling **********/
+h3 {
+    text-align: center;
+    color: #ffffff;
+    padding-top: 5px;
+}
+/********** Player Section **********/
+
+.playerCards {
+    height: 30vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+}
+
+.playerCards .card {
+    margin-top: 3vh;
+}
+
+/********** Card image sizing **********/
+.card img {
+    margin: 0 auto;
+    height: 25vh;
+    width: auto;
+    padding: 0 5px;
+}
+
+/********** Money display **********/
+/* #betTotal {} */
+#playerBankHeader {
+    margin-bottom: 10px;
+}
+
+/********** Play buttons **********/
+nav {
+    display: block;
+    height: 10vh;
+}
+.playerButtons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+button {
+    border: none;
+    text-align: center;
+    border: 2px black solid;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #555555;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+button:hover {
+    transform: scale(1.15);
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.betButtons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+
+.betButtons li button{
+        /* display:block; */
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        border: 10px double black;
+        text-align: center;
+        padding: 0;
+        font-size: 14px;
+}
+
+/* Changing color of poker chips */
+#bet10 {
+    background-color: #255AE8;
+}
+
+#bet25 {
+    background-color: #E82F2E;
+}
+
+#bet50 {
+    background-color: #B43FEB;
+}
+
+#bet100 {
+    background-color: #F56E00
+}
+
+#resetBet, #allIn {
+    border: none;
+    text-align: center;
+    border: 2px black solid;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #555555;
+    color: #ffffff;
+    /* padding: 10px 20px; */
+    margin: 0 5px;
+    width: 80px;
+    height: 40px;
+    vertical-align: normal;
+    margin-top: 15%;
+}
+
+
+/********** Winner message **********/
+#winnerMessage {
+    background-color: #bbbbbb;
+    border: 1px black solid;
+    border-radius: 10px;
+    /* Source to create centered div: https://vanseodesign.com/css/vertical-centering/ */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 30%;
+    margin: auto;
+    display: none;
+}
+#winnerMessage h2 {
+    color: #000;
+    text-align: center;
+    vertical-align: middle;
+    opacity: 1;
+    padding-top: 10vh;
+    font-size: 60px;
+}
+

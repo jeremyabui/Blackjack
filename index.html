@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./js/app.js" defer></script>
+    <!-- Credit to Jeff -->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAm5ubB4ODg26AgIB2gICAdoCAgHaAgIB2gICAfY6OjggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANTU1lwAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/2JiYgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAgsQAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz8/awoKCtYTExPFYWFhFUpKSmoBAQH9QEBACw4ODr0BAQHXFRUVqi0tLQgAAAAAAAAAAAAAAAAAAAAAAAAA/AAAAP8AAAD/AAAA/wAAAP8iIiLCBwcH6AAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAArq6uKQAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wsLC9wAAAAAAAAAAICAgHEAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADxAAAAAAAAAACoqKgzAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/CQkJ2wAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/2pqag8AAAAAAAAAAAAAAACJiYkaAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wYGBuYAAAAAAAAAAAAAAAAAAAAAAAAAAFtbWxcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wsLC8UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/y0tLSUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAPw/AAD+fwAA/n8AAPNHAADAAwAAwAEAAMABAADAAQAAwAMAAOADAADwBwAA+B8AAPw/AAD+fwAA//8AAA==" rel="icon" type="image/x-icon" />
+    <title>Blackjack</title>
+</head>
+<body>
+    <header>
+        
+        <h1>
+                <span class="blackSuit">&clubs;</span>
+                <span class="redSuit">&hearts;</span>
+            Blackjack
+            <span class="redSuit">&diams;</span>
+            <span class="blackSuit">&spades;</span></h1> 
+        
+    </header>
+
+    <section>
+        <div class="dealerCards">
+        </div>
+    </section>
+
+    <section>
+        <div class="playerCards"></div>
+        <nav>
+                <h3>Bet Total: <span id="betTotal">$0</span></h3>
+                <h3 id="playerBankHeader">Player Bank: $<span id="playerBank">1000</span></h3>
+            <div>
+                <ul class="playerButtons">
+                    <li><button id="deal">Deal</button></li> 
+                    <li>
+                        <button id="hit">Hit</button>
+                    </li>
+                    <li>
+                        <button id="stand">Stand</button>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="betButtons">
+                    <li>
+                        <button id="resetBet">Reset Bet</button>
+                    </li>
+                    <li><button id="bet10">$10</button></li> 
+                    <li>
+                        <button id="bet25">$25</button>
+                    </li>
+                    <li>
+                        <button id="bet50">$50</button>
+                    </li>
+                    <li>
+                        <button id="bet100">$100</button>
+                    </li>
+                    <li>
+                        <button id="allIn">All In</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="winnerMessage"><h2></h2></div>
+    </section>
+    <audio src='sounds/poker-chips.mp3' id='chipSounds'></audio>
+</body>
+</html>
